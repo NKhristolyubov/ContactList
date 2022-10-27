@@ -20,7 +20,7 @@ struct Person {
         ("\(name) \(surName)")
     }
     
-    func getContactList() -> [Person] {
+    static func getContactList() -> [Person] {
         
         var persons: [Person] = []
         
@@ -30,7 +30,6 @@ struct Person {
         let emails = DataManager.shared.email.shuffled()
         
         let count = min(names.count, surmames.count, phoneNumbers.count, emails.count)
-        
         for index in 0..<count {
             
             let person = Person(
